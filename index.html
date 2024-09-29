@@ -64,7 +64,7 @@
             border-image: linear-gradient(to right, royalblue, white) 1;
             border-image-slice: 1;
             animation: borderAnimation 5s ease infinite;
-            position:fixed;    
+            position: fixed;
             z-index: 1000;
             /* Animation duration */
         }
@@ -225,7 +225,6 @@
         .lead {
             color: black;
         }
-
     </style>
 </head>
 
@@ -233,12 +232,30 @@
     <!-- Main content -->
     <div class="content">
         <!-- Navbar -->
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><b><span style="color:navy">Profil</span> <span
                             style="color: blue;">Biodata</span></b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link"  href="company.html">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
         <!-- Container -->
         <div class="container">
             <!-- Jumbotron -->
@@ -254,12 +271,14 @@
                         <div class="col-11">
                             <!-- Isi Perkenalan -->
                             <h1 class="display-4 animated-gradient">RESUME</h1>
-                            <p class="lead">HTML adalah sebuah bahasa yang menggunakan penanda untuk membuat webpage.<br>
+                            <p class="lead">HTML adalah sebuah bahasa yang menggunakan penanda untuk membuat
+                                webpage.<br>
                                 HTML bisa kita asumsikan sebagai sebuah bahan untuk membangun struktur web.<br>
                                 Terdapat bahasa lain sebagai pelengkap untuk membangun web Seperti CSS dan JS<br>
-                                
+
                             </p>
-                            <a class="btn btn-outline-dark" href="https://www.petanikode.com/html-dasar/" role="button">Referensi</a>
+                            <a class="btn btn-outline-dark" href="https://www.petanikode.com/html-dasar/"
+                                role="button">Referensi</a>
                         </div>
                     </div>
                     <hr class="my-4 bg-dark">

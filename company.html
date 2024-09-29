@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="icon" href="source/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            overflow-y: hidden;
+            background-color: #fff;
+        }
+
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        .content::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        }
+
+        .content::-webkit-scrollbar {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-image: -webkit-gradient(linear,
+                    left bottom,
+                    left top,
+                    color-stop(0.44, #aab6fb),
+                    color-stop(0.72, #6096fd),
+                    color-stop(0.86, #031b88));
+            opacity: 0;
+            /* Make it invisible */
+        }
+
+
+
+        .navbar {
+            width: 100%;
+            border-bottom: 5px solid;
+            /* Thickness of the border */
+            border-image: linear-gradient(to right, royalblue, white) 1;
+            border-image-slice: 1;
+            animation: borderAnimation 5s ease infinite;
+            position: fixed;
+            z-index: 1000;
+            /* Animation duration */
+        }
+
+        .navbar-brand {
+            margin-left: 2em;
+            font-family: Tahoma, sans-serif;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-image-source: linear-gradient(to right, royalblue, white);
+            }
+
+            50% {
+                border-image-source: linear-gradient(to left, royalblue, white);
+            }
+
+            100% {
+                border-image-source: linear-gradient(to right, royalblue, white);
+            }
+        }
+
+        .about,
+        .products {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mt {
+            margin-top: 1em;
+        }
+
+        .jumbotron {
+            background-image: url('source/back.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 25em;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-image: url('source/back.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .darken {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><b><span style="color:navy">Company</span> <span
+                            style="color: blue;">Profil</span></b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="company.html">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron text-center position-relative">
+            <div class="darken"></div>
+            <div class="container">
+                <h1 class="display-4 mt">We'll Serve You Well</h1>
+                <p class="lead">Kami adalah perusahaan inovatif yang menghadirkan solusi terbaik untuk memenuhi
+                    kebutuhan Anda. Produk kami dirancang dengan kualitas tertinggi dan teknologi terbaru, memastikan
+                    kepuasan pelanggan setiap saat.</p>
+
+                <hr class="my-4" style="border: 1px solid white;">
+                <p class="lead">
+                    <a href="index.html" role="button" class="btn btn-outline-primary"
+                        style="margin-right: 0.5em;">About Me <i class="fa-solid fa-address-book"></i></i></a>
+                    <button id="aboutUsBtn" class="btn btn-outline-primary"
+                        style="margin-left: 0.5em;margin-right: 0.5em;">Learn More <i
+                            class="fa-solid fa-circle-info"></i></button>
+                    <a href="contact.html" role="button" class="btn btn-outline-primary" style="margin-left: 0.5em;">Contact Us <i
+                            class="fa-solid fa-comment"></i></i></a>
+                    <br />
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+            <!-- About Section -->
+            <div class="about" id="aboutUs" style="display: none;">
+                <h2>About Us</h2>
+
+                <p>Kami berkomitmen untuk menghadirkan solusi inovatif yang memenuhi kebutuhan
+                    pelanggan. Kami telah fokus pada pengembangan produk berkualitas tinggi dan
+                    layanan terbaik untuk memberikan pengalaman yang memuaskan.</p>
+
+                <p>Kami percaya bahwa hubungan yang kuat dengan pelanggan sangat penting. Dengan mendengarkan masukan
+                    dan saran, kami berusaha membangun kemitraan yang langgeng dan saling menguntungkan.</p>
+
+                <p>Visi kami adalah menjadi pemimpin di industri ini melalui inovasi dan keberlanjutan. Setiap produk
+                    yang kami tawarkan tidak hanya bermanfaat tetapi juga berkontribusi positif terhadap lingkungan dan
+                    masyarakat. Bergabunglah dengan kami untuk merasakan perbedaannya!</p>
+
+            </div>
+
+            <!-- Products Section -->
+            <div class="products">
+                <h2>Our Products</h2>
+
+                <!-- Product 1 -->
+                <div class="product-item d-flex align-items-center mb-4">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="text-center">Product Name</th>
+                                <th class="text-center">Features</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Image</th> <!-- New column for the image -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PC HighEnd</td>
+                                <td>High Efficiency, High Performance</td>
+                                <td class="text-right">$299</td>
+                                <td class="text-center"><img src="source/prod1.jpg" alt="Product 1"
+                                        style="width: 80px; height: auto;"></td> <!-- Image cell -->
+                            </tr>
+                            <tr>
+                                <td>AMD RYZEN</td>
+                                <td>High Efficiency, Reliable</td>
+                                <td class="text-right">$42</td>
+                                <td class="text-center"><img src="source/prod2.jpg" alt="Product 2"
+                                        style="width: 80px; height: auto;"></td> <!-- Image cell -->
+                            </tr>
+                            <tr>
+                                <td>PC HighMid</td>
+                                <td>High Efficiency, High Performance</td>
+                                <td class="text-right">$250</td>
+                                <td class="text-center"><img src="source/prod3.jpg" alt="Product 3"
+                                        style="width: 80px; height: auto;"></td> <!-- Image cell -->
+                            </tr>
+                            <tr>
+                                <td>GeForce</td>
+                                <td>High Efficiency, Reliable</td>
+                                <td class="text-right">$110</td>
+                                <td class="text-center"><img src="source/prod4.jpg" alt="Product 4"
+                                        style="width: 80px; height: auto;"></td> <!-- Image cell -->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="darken"></div>
+            <p>&copy; 2024 Little Bii. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('aboutUsBtn').addEventListener('click', function () {
+            var aboutSection = document.getElementById('aboutUs');
+            if (aboutSection.style.display === "none") {
+                aboutSection.style.display = "block"; // Show the About Us section
+            } else {
+                aboutSection.style.display = "none"; // Hide the About Us section
+            }
+        });
+    </script>
+</body>
+
+</html>
